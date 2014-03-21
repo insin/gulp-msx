@@ -13,7 +13,7 @@ var testFileContents = [
 var expectedTransformedContents = [
   '/** @jsx m */'
 , 'hello.view = function(ctrl) {'
-, '  return m(\'div\', {id:"test"}, ["Hello ", ctrl.name])'
+, '  return m("div", {id:"test"}, ["Hello ", ctrl.name])'
 , '}'
 ]
 
