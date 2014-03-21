@@ -1,4 +1,4 @@
-# [gulp](http://gulpjs.com/)-msx
+# [gulp](http://gulpjs.com/)-msx [![Build Status](https://secure.travis-ci.org/insin/gulp-msx.png?branch=master)](http://travis-ci.org/insin/gulp-msx)
 
 (Based on [gulp-react](https://github.com/sindresorhus/gulp-react))
 

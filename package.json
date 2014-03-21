@@ -23,5 +23,11 @@
     "gulp-util": "^2.2.14",
     "msx": "^0.1.1",
     "through2": "^0.4.1"
+  },
+  "devDependencies": {
+    "tape": "^2.10.2"
+  },
+  "scripts": {
+    "test": "node tests.js"
   }
 }

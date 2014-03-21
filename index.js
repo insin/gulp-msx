@@ -20,7 +20,7 @@ module.exports = function(name) {
 
     var str = file.contents.toString()
 
-    if (path.extname(file.path) === '.jsx' && str.indexOf('* @jsx') === -1) {
+    if (path.extname(file.path) === '.jsx' && !(/\*\s*@jsx/.test(str))) {
       str = '/** @jsx m */\n' + str
     }
 
