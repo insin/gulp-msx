@@ -18,7 +18,7 @@ npm install --save-dev gulp-msx
 var gulp = require('gulp')
 var msx = require('gulp-msx')
 
-gulp.task('transform-jsx', function () {
+gulp.task('transform-jsx', function() {
   return gulp.src('./src/**/*.jsx')
     .pipe(msx())
     .pipe(gulp.dest('./dist'))
