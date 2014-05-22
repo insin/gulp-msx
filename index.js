@@ -30,7 +30,8 @@ module.exports = function(name) {
     }
     catch (err) {
       err.fileName = file.path
-      this.emit('error', new gutil.PluginError('gulp-msx', err))
+      this.emit('error', new gutil.PluginError('gulp-msx',
+        gutil.colors.magenta(path.relative(file.cwd, file.path)) + ' ' + err.message))
     }
 
     this.push(file)
