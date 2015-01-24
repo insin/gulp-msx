@@ -6,13 +6,13 @@ Precompiles [Mithril](http://lhorie.github.io/mithril/) views which use
 [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) into
 JavaScript, using [msx](https://github.com/insin/msx).
 
-### Install
+## Install
 
 ```
 npm install --save-dev gulp-msx
 ```
 
-### Example
+## Example
 
 ```javascript
 var gulp = require('gulp')
@@ -28,6 +28,12 @@ gulp.task('transform-jsx', function() {
 The JSX `/** @jsx m */` pragma is prepended to `.jsx` files if missing.
 
 `.jsx` files are automatically renamed to `.js` for you, ready for output.
+
+## API
+
+### `msx([options: Object])`
+
+`optioos` - options to be passed to the call to [`msx.transform()`](https://github.com/insin/msx/#module-api)
 
 ---
 
