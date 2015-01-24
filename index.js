@@ -27,6 +27,7 @@ module.exports = function(name) {
     try {
       file.contents = new Buffer(msx.transform(str))
       file.path = gutil.replaceExtension(file.path, '.js')
+      this.push(file)
     }
     catch (err) {
       err.fileName = file.path
@@ -34,7 +35,6 @@ module.exports = function(name) {
         gutil.colors.magenta(path.relative(file.cwd, file.path)) + ' ' + err.message))
     }
 
-    this.push(file)
     cb()
   })
 }
