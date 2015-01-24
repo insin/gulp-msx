@@ -6,7 +6,7 @@ var gutil = require('gulp-util')
 var msx = require('msx')
 var through = require('through2')
 
-module.exports = function(name) {
+module.exports = function(name, options) {
   return through.obj(function(file, enc, cb) {
     if (file.isNull()) {
       this.push(file)
@@ -25,7 +25,7 @@ module.exports = function(name) {
     }
 
     try {
-      file.contents = new Buffer(msx.transform(str))
+      file.contents = new Buffer(msx.transform(str, options))
       file.path = gutil.replaceExtension(file.path, '.js')
     }
     catch (err) {
