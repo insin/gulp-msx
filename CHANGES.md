@@ -1,8 +1,12 @@
+## 0.2.0 / 2015-01-24
+
+Now depends on msx 0.2.0.
+
 Added: pass options to msx \[[liamcurry]\]
 
 Changed: only push files which transform without error \[[liamcurry]\]
 
-## v0.1.0 / 2014-03-21
+## 0.1.0 / 2014-03-21
 
 First release.
 

@@ -33,7 +33,8 @@ The JSX `/** @jsx m */` pragma is prepended to `.jsx` files if missing.
 
 ### `msx([options: Object])`
 
-`optioos` - options to be passed to the call to [`msx.transform()`](https://github.com/insin/msx/#module-api)
+`options` - options to be passed to the call to
+[`msx.transform()`](https://github.com/insin/msx/#module-api).
 
 ---
 
