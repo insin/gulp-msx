@@ -1,7 +1,7 @@
 {
   "name": "gulp-msx",
-  "version": "0.2.0",
-  "description": "Precompiles Mithril views which use JSX into JavaScript, using msx",
+  "version": "0.2.1",
+  "description": "Precompiles Mithril views which use MSX into JavaScript",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/insin/gulp-msx",
   "dependencies": {
     "gulp-util": "^3.0.2",
-    "msx": "^0.2.0",
+    "msx": "^0.2.1",
     "through2": "^0.6.3"
   },
   "devDependencies": {

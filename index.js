@@ -6,7 +6,7 @@ var gutil = require('gulp-util')
 var msx = require('msx')
 var through = require('through2')
 
-module.exports = function(name, options) {
+module.exports = function(options) {
   return through.obj(function(file, enc, cb) {
     if (file.isNull()) {
       this.push(file)

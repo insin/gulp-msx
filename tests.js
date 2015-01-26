@@ -17,8 +17,23 @@ var expectedTransformedContents = [
 , '}'
 ]
 
-function streamTest(filename, contents, onData) {
-  var stream = msx()
+var testOptionsContents = [
+  '/** @jsx m */'
+, 'hello.view = (ctrl) => {'
+, '  return <div id="test">{`Hello ${ctrl.name}`}</div>'
+, '}'
+].join('\n')
+
+var expectedOptionsOutput = [
+  '/** @jsx m */'
+, 'hello.view = function(ctrl)  {'
+, '  return m("div", {id:"test"}, [("Hello " + ctrl.name)])'
+, '}'
+].join('\n')
+
+
+function streamTest(filename, contents, onData, options) {
+  var stream = msx(options)
   stream.on('data', onData)
   stream.write(new gutil.File({
     path: filename
@@ -62,4 +77,13 @@ test('detects multi-line JSX pragma', function(t) {
             expected.join('\n'),
             'no additional JSX pragma was added and tags were transformed to m() function calls')
   })
+})
+
+test('passing options', function(t) {
+  t.plan(1)
+  streamTest('fixture.jsx', testOptionsContents, function(file) {
+    t.equal(file.contents.toString(),
+            expectedOptionsOutput,
+            'options were passed to msx.transform()')
+  }, {harmony: true, precompile: false})
 })

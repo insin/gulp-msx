@@ -1,3 +1,7 @@
+## 0.2.1 / 2015-01-26
+
+Fixed: options passed to `msx()` are now passed on to `msx.transform()`
+
 ## 0.2.0 / 2015-01-24
 
 Now depends on msx 0.2.0.
