@@ -18,14 +18,8 @@ module.exports = function(options) {
       return cb()
     }
 
-    var str = file.contents.toString()
-
-    if (path.extname(file.path) === '.jsx' && !(/\*\s*@jsx/.test(str))) {
-      str = '/** @jsx m */\n' + str
-    }
-
     try {
-      file.contents = new Buffer(msx.transform(str, options))
+      file.contents = new Buffer(msx.transform(file.contents.toString(), options))
       file.path = gutil.replaceExtension(file.path, '.js')
       this.push(file)
     }

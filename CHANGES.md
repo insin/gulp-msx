@@ -1,3 +1,9 @@
+## 0.3.0 / 2015-01-27
+
+Now depends on msx 0.3.0.
+
+Removed: `@jsx m` pragma checking/adding is no longer necessary as of msx 0.3.0.
+
 ## 0.2.1 / 2015-01-26
 
 Fixed: options passed to `msx()` are now passed on to `msx.transform()`

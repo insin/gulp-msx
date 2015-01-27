@@ -20,12 +20,10 @@ var msx = require('gulp-msx')
 
 gulp.task('transform-jsx', function() {
   return gulp.src('./src/**/*.jsx')
-    .pipe(msx())
+    .pipe(msx({harmony: true}))
     .pipe(gulp.dest('./dist'))
 })
 ```
-
-The JSX `/** @jsx m */` pragma is prepended to `.jsx` files if missing.
 
 `.jsx` files are automatically renamed to `.js` for you, ready for output.
 
