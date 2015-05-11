@@ -11,7 +11,7 @@ var basicTestContents = [
 
 var basicTestExpected = [
   'hello.view = function(ctrl) {'
-, '  return {tag: "div", attrs: {id:"test"}, children: ["Hello ",ctrl.name]}'
+, '  return {tag: "div", attrs: {id:"test"}, children: ["Hello ", ctrl.name]}'
 , '}'
 ].join('\n')
 

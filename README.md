@@ -3,8 +3,8 @@
 (Based on [gulp-react](https://github.com/sindresorhus/gulp-react))
 
 Precompiles [Mithril](http://lhorie.github.io/mithril/) views which use
-[JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) into
-JavaScript, using [msx](https://github.com/insin/msx).
+[JSX](http://facebook.github.io/jsx/) into JavaScript, using
+[msx](https://github.com/insin/msx).
 
 ## Install
 

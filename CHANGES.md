@@ -1,3 +1,7 @@
+## 0.4.0 / 2015-05-11
+
+Now depends on msx 0.4.0.
+
 ## 0.3.0 / 2015-01-27
 
 Now depends on msx 0.3.0.
